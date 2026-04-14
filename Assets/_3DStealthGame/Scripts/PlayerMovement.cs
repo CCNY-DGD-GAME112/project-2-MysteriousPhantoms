@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
 
-    // NEW: AudioSource for footsteps
+ //AudioSource for footsteps
     AudioSource m_AudioSource;
 
     private List<string> m_OwnedKeys = new List<string>();
@@ -28,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
         MoveAction.Enable();
         SprintAction.Enable();
         m_Animator = GetComponent<Animator>();
-
-        // NEW: get AudioSource component
         m_AudioSource = GetComponent<AudioSource>();
     }
 
@@ -61,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody.position + m_Movement * speed * Time.deltaTime
         );
 
-        // NEW: Play footstep audio when walking
+        //Play footstep audio when walking
         if (isWalking)
         {
             if (!m_AudioSource.isPlaying)

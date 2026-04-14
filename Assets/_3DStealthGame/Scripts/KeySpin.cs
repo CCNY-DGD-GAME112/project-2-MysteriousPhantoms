@@ -1,5 +1,5 @@
 using UnityEngine;
-
+// hehe spinning key
 public class KeySpin : MonoBehaviour
 {
     public float rotateSpeed = 100f;

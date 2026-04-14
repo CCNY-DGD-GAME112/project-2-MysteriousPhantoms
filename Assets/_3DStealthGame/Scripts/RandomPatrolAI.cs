@@ -28,7 +28,7 @@ public class RandomPatrolAI : BaseAI
             Vector2 rand = Random.insideUnitCircle * wanderRadius;
             currentTarget = rb.position + new Vector3(rand.x, 0, rand.y);
 
-            // Optional: keep target within scene bounds
+            // Keep target within scene bounds
             currentTarget.y = rb.position.y;
 
             // Wait for wanderTimer seconds before picking a new target

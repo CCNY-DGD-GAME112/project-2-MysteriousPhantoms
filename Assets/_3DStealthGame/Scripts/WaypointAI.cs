@@ -20,7 +20,7 @@ public class WaypointAI : BaseAI
         Vector3 target = waypoints[currentWaypointIndex].position;
         Vector3 toTarget = target - rb.position;
 
-        // Check if reached current waypoint
+        // Finally this works
         if (toTarget.magnitude < 0.1f)
         {
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;

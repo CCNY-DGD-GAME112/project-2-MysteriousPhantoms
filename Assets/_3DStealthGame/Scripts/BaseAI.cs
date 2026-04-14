@@ -9,16 +9,15 @@ public class BaseAI : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         if (rb != null)
-            rb.isKinematic = true; // we move manually using MovePosition
+            rb.isKinematic = true;
     }
-
-    // Helper to move toward a position
+    
     protected void MoveTowards(Vector3 target)
     {
         if (rb == null) return;
 
         Vector3 direction = target - rb.position;
-        direction.y = 0; // optional: keep movement on XZ plane
+        direction.y = 0;
         if (direction.magnitude > 0.01f)
         {
             rb.MoveRotation(Quaternion.LookRotation(direction));

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Timer Settings")]
     public float roundTime = 120f; // total time in seconds
-    public TextMeshProUGUI timerText; // optional, shows timer on screen
+    public TextMeshProUGUI timerText; // timer on screen
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         UpdateTimerUI();
 
-        // Restart scene automatically when timer reaches 0
+        // Restarts the scene automatically when timer reaches 0
         if (roundTime <= 0f)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
