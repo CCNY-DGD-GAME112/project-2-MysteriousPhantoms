@@ -2986,8 +2986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomPatrolAI
   moveSpeed: 2.5
-  wanderRadius: 4.5
-  wanderTimer: 1.5
+  wanderRadius: 5
+  wanderTimer: 3
 --- !u!195 &1900385439
 NavMeshAgent:
   m_ObjectHideFlags: 0
